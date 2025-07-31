@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import { APP_NAME, NAV_LIST } from '../../constant'
 import './navbar.css'
 import {Link} from 'react-router-dom'
-import Logo from '../../uploads/Idio-logo.svg'
 function Navbar() {
 
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  // const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [activeTab,setActiveTab] = useState('Home');
   return (
     <div className='nav-section'>
@@ -28,7 +27,7 @@ function Navbar() {
           ))}
         </ul>
         <div className="nav-section-right">
-          {isLoggedIn ? 
+          {true ? 
           <p>Username</p> : 
           <Link to='/login'>
               <button className='nav-login-btn'

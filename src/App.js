@@ -1,7 +1,6 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import './App.css';
-import CustomError from './components/Error/CustomError';
 import Login from './components/Login/Login';
 import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter, Route,Routes } from 'react-router-dom';
@@ -14,8 +13,8 @@ import MultiplePost from './components/Post/MultiplePost';
 
 function App() {
 
-  const [data,setData] = useState({});
-  const [userProfile,setUserProfile] = useState('');
+  // const [data,setData] = useState({});
+  // const [userProfile,setUserProfile] = useState('');
 
   useEffect(() => {
     const isLoggedIn = async() => {

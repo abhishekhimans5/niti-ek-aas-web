@@ -3,7 +3,6 @@ import '../Login/login.css'
 import './signupstep_1.css'
 import { SignupDataContext } from './SignupContext';
 import { APP_NAME, INV_PRICE, INVESTMENT_TYPE } from '../../constant';
-import Select from 'react-select';
 import { isValidUrl } from '../../utils/verifyData';
 import { createUser } from '../../api/createUser';
 import Spinner from '../Spinner/Spinner';

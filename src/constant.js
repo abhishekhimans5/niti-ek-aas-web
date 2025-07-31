@@ -1,5 +1,5 @@
 export const APP_NAME = {
-    name:'Idio'
+    name:'Idio Karo'
 };
 export const NAV_LIST = [
     {

@@ -1,7 +1,7 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext} from 'react'
 import '../Login/login.css'
 import './signupstep_1.css'
-import { APP_NAME, BUSINESS_TYPE, INVESTMENT_TYPE } from '../../constant'
+import { APP_NAME, BUSINESS_TYPE} from '../../constant'
 import { SignupDataContext } from './SignupContext';
 import Select from 'react-select';
 
