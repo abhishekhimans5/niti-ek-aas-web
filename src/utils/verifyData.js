@@ -9,6 +9,6 @@ export const isValidPassword = (password) => {
 }
 
 export const isValidUrl = (url) => {
-    const urlRegex = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/[\w\-._~:/?#\[\]@!$&'()*+,;=]*)?$/;
+    const urlRegex = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/[\w\-._~:/?#[\]@!$&'()*+,;=]*)?$/;
     return urlRegex.test(url);
 }
