@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+
+import { useEffect, useState } from 'react';
 import './App.css';
+import CustomError from './components/Error/CustomError';
+import Login from './components/Login/Login';
+import Navbar from './components/Navbar/Navbar';
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
+import Signup from './components/Signup/Signup';
+import TemporaryProfile from './components/Error/TemporaryProfile';
+import { setUser } from './api/setUser';
+import MultiplePost from './components/Post/MultiplePost';
+
 
 function App() {
+
+  const [data,setData] = useState({});
+  const [userProfile,setUserProfile] = useState('');
+
+  useEffect(() => {
+    const isLoggedIn = async() => {
+      const result = await setUser();
+      console.log(JSON.stringify(result,null,2));
+    }
+    isLoggedIn();
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route element={<Login />} path='/login' />
+          {/* <Route element={<CustomError/>} path='*' /> */}
+          <Route element={<MultiplePost/>} path='*' />
+          <Route element={<Signup />} path='/signup' />
+          <Route element={<TemporaryProfile />} path='/user-profile' />
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
     </div>
   );
 }

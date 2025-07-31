@@ -1,0 +1,70 @@
+.signup-step-1{
+    width: 350px;
+    height: 550px;
+    color: var(--text-color-secondary);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 2px 2px 10px var(--color-primary),
+              -2px -2px 10px var(--color-primary);
+}
+.signup-checkbox{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 10px;
+}.signup-checkbox-input{
+    height: 20px;
+    width: 20px;
+}
+.businessman-signup-label{
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+}
+.signup-checkbox-label {
+    width: calc(100% - 30px); /* Reduce width slightly */
+    margin-left: 30px;        /* Apply left margin */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 40px;
+    justify-content: flex-start;
+}
+.signup-mutliselect-label {
+    width: calc(100% - 30px); /* Reduce width slightly */
+    margin-left: 30px;        /* Apply left margin */
+    font-weight: 500;
+    display: flex;
+    padding: 5px 10px;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.signup-mutliselect-box{
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    width: 240px;
+}
+/* .error-div{
+    display: none;
+}
+.error-div-visible{
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-weight: 600;
+} */
+.error-div-visible {
+  display: block;
+  color: red;
+}
+
+.error-div {
+  display: none;
+}
