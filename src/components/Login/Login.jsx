@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { isValidEmail, isValidPassword } from '../../utils/verifyData.js'
 import Spinner from '../Spinner/Spinner.jsx'
 import { LoggedInUserContext } from '../../Contexts/LoggedInUSerContext.js'
+import TemporaryProfile from '../Error/TemporaryProfile.jsx'
 
 function Login(props) {
 
@@ -25,6 +26,13 @@ function Login(props) {
             ...prev,
             [name] : value,
         }))
+    }
+
+    // for logout :
+    const handleLogout = () => {
+        setIsLoggedIn(false)
+        setUserProfile({})
+        localStorage.removeItem('token');
     }
 
     // for handling form Login
@@ -56,6 +64,14 @@ function Login(props) {
     }
 
   return (
+    <>{isLoggedIn ? <div>
+        <TemporaryProfile data={userProfile}/>
+        <button className="form-login-button"
+                    onClick={handleLogout}>
+                Logout
+            </button>
+    </div> :
+    
     <div className="section-login" >
         {isLoading && <Spinner width={"30px"} height={"30px"}/>}
         <form onSubmit={handleLogin} className='form-login'>
@@ -93,6 +109,7 @@ function Login(props) {
         </form>
         
     </div>
+    }</>
   )
 }
 

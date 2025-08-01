@@ -1,6 +1,7 @@
 
 export const shortNameExtractor = (name) => {
     if (!name || name.trim() === '') return '-';
+    name = name.toUpperCase();
     const nameArr = name?.split(' ');
     let shortName = '';
     if(nameArr?.length > 0){

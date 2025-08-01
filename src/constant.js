@@ -1,5 +1,10 @@
+import facebook from './icons/facebook.png'
+import instagram from './icons/instagram_.png'
+import twitter from './icons/twitter.png'
+import youtube from './icons/youtube.png'
 export const APP_NAME = {
-    name:'Idio Karo'
+    name:'Idio Karo',
+    description : "Idio is a Trade mark company of Niti Ek-AAS group. It is an initiative to help people to the ground level."
 };
 export const NAV_LIST = [
     {
@@ -92,3 +97,28 @@ export const INV_PRICE = {
     MIN : 10000,
     MAX : 10000000
 }
+
+export const SOCIAL_LINKS = [
+    {
+        name : 'Instagram',
+        icon : instagram,
+        link : 'https://www.instagram.com/idiokaro?igsh=MTU0NXg1cGk5NHltdw=='
+    },
+    {
+        name : 'Facebook',
+        icon : facebook,
+        link : 'https://www.facebook.com/idiokaro'
+    },
+    {
+        name : 'Twitter',
+        icon : twitter,
+        link : 'https://www.twitter.com/idiokaro'
+    },
+    {
+        name : 'Youtube',
+        icon : youtube,
+        link : 'https://www.youtube.com/idiokaro'
+    }
+]
+
+

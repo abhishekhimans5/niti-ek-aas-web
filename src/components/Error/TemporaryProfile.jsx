@@ -3,10 +3,10 @@ import { Link, useLocation } from 'react-router-dom'
 import { shortNameExtractor } from '../../utils/shortNameExtractor';
 import './temporaryprofile.css'
 
-const TemporaryProfile = () => {
+const TemporaryProfile = (props) => {
     const location = useLocation();
 
-    const data = location.state || {};
+    const data = location.state || props.data || {};
   return (
     <div className="main-container">
         {/* {JSON.stringify(data,null,2)} */}
