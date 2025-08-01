@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './login.css'
 import { APP_NAME } from '../../constant'
 import loginUser from '../../api/loginUser.js'
 import { Link, useNavigate } from 'react-router-dom'
 import { isValidEmail, isValidPassword } from '../../utils/verifyData.js'
 import Spinner from '../Spinner/Spinner.jsx'
+import { LoggedInUserContext } from '../../Contexts/LoggedInUSerContext.js'
 
 function Login(props) {
 
+    const {isLoggedIn,setIsLoggedIn,userProfile,setUserProfile} = useContext(LoggedInUserContext);
     const [formField,setFromField] = useState({
         email : "",
         password : "",
@@ -40,6 +42,8 @@ function Login(props) {
             setIsLoading(false)
             if(loginResult.success){
                 alert(loginResult.msg);
+                setIsLoggedIn(true);
+                setUserProfile(loginResult.data);
                 navigate('/user-profile',{
                     state : loginResult.data,
                 });

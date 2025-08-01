@@ -1,0 +1,15 @@
+API response : {
+    error : {
+        success : false
+        msg,
+        type
+    },
+    data : {
+        success : true,
+        msg,
+        data
+    }
+}
+
+error = error.response.data
+data = result.data

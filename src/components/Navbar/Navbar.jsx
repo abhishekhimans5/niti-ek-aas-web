@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { APP_NAME, NAV_LIST } from '../../constant'
 import './navbar.css'
 import {Link} from 'react-router-dom'
+import { LoggedInUserContext } from '../../Contexts/LoggedInUSerContext'
 function Navbar() {
 
-  // const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const {isLoggedIn,setIsLoggedIn,userProfile} = useContext(LoggedInUserContext);
   const [activeTab,setActiveTab] = useState('Home');
   return (
     <div className='nav-section'>
@@ -27,8 +28,8 @@ function Navbar() {
           ))}
         </ul>
         <div className="nav-section-right">
-          {true ? 
-          <p>Username</p> : 
+          {isLoggedIn ? 
+          <p>{userProfile.name}</p> : 
           <Link to='/login'>
               <button className='nav-login-btn'
                   style={{

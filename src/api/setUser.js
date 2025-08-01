@@ -8,9 +8,10 @@ export const setUser = async() => {
                 'Authorization' : `Bearer ${token}`
             }
         });
+        console.log(JSON.stringify(result.data,null,2));
         return result.data;
     } catch (error) {
-        console.log(JSON.stringify(error,null,2));
+        //console.log(JSON.stringify(error.response.data,null,2));
         return error.response.data;
     }
 }
