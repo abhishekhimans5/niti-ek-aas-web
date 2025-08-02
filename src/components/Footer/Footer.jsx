@@ -1,5 +1,5 @@
 import React from 'react'
-import { APP_NAME, NAV_LIST } from '../../constant'
+import { APP_NAME, CONTACT_INFO, NAV_LIST } from '../../constant'
 import { SOCIAL_LINKS } from '../../constant'
 import './footer.css'
 import { Link } from 'react-router-dom'
@@ -19,6 +19,10 @@ function Footer() {
             </div>
           ))}
         </div>
+        <div className="copyright">
+          <p>{APP_NAME.name} &copy; 2025</p>
+          All right reserved to <span>{APP_NAME.name}™</span>
+        </div>
       </div>
       <div className="footer-right">
         <div className="other-links">
@@ -30,7 +34,12 @@ function Footer() {
             </div>
           })}
         </div>
-        <div className="contact"></div>
+        <div className="contact">
+          <div className="tag">{CONTACT_INFO.tag}</div>
+          <div className="address">{CONTACT_INFO.address}</div>
+          <div className="email-info">{CONTACT_INFO.email}</div>
+          <div className="ph-number">{CONTACT_INFO.number}</div>
+        </div>
       </div>
     </div>
   )

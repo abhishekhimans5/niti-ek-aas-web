@@ -36,7 +36,7 @@ function App() {
           <Routes>
             <Route element={<Login />} path='/login' />
             {/* <Route element={<CustomError/>} path='*' /> */}
-            <Route element={<MultiplePost/>} path='*' />
+            <Route element={<MultiplePost/>} path='/' />
             <Route element={<Signup />} path='/signup' />
             <Route element={<TemporaryProfile />} path='/user-profile' />
           </Routes>

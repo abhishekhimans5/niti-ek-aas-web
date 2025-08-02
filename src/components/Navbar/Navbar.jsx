@@ -3,6 +3,7 @@ import { APP_NAME, NAV_LIST } from '../../constant'
 import './navbar.css'
 import {Link} from 'react-router-dom'
 import { LoggedInUserContext } from '../../Contexts/LoggedInUSerContext'
+import { shortNameExtractor } from '../../utils/shortNameExtractor'
 function Navbar() {
 
   const {isLoggedIn,setIsLoggedIn,userProfile} = useContext(LoggedInUserContext);
@@ -29,7 +30,9 @@ function Navbar() {
         </ul>
         <div className="nav-section-right">
           {isLoggedIn ? 
-          <p>{userProfile.name}</p> : 
+          <div className="profile-name">
+            {shortNameExtractor(userProfile.name)}
+          </div> : 
           <Link to='/login'>
               <button className='nav-login-btn'
                   style={{

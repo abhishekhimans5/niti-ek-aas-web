@@ -28,4 +28,9 @@
   align-items: center;
   flex-direction: column;
   background: var(--color-screen);
+  width: fit-content;
+  min-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  bottom: 0;
 }

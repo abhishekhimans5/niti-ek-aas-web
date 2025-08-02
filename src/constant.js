@@ -3,7 +3,7 @@ import instagram from './icons/instagram_.png'
 import twitter from './icons/twitter.png'
 import youtube from './icons/youtube.png'
 export const APP_NAME = {
-    name:'Idio Karo',
+    name:'Idio',
     description : "Idio is a Trade mark company of Niti Ek-AAS group. It is an initiative to help people to the ground level."
 };
 export const NAV_LIST = [
@@ -120,5 +120,12 @@ export const SOCIAL_LINKS = [
         link : 'https://www.youtube.com/idiokaro'
     }
 ]
+
+export const CONTACT_INFO = {
+    tag : 'Contact',
+    email : 'idiokaro@gmail.com',
+    address : 'Noida Sector-62 U.P. (201301)',
+    number : '(+91)-xxx xxxx xxx'
+}
 
 

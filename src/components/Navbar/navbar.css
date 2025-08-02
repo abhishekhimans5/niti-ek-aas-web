@@ -10,7 +10,6 @@
     border-bottom-right-radius: 20px;
     background-color: var(--color-primary);
     box-shadow: 2px 2px 5px var(--color-primary);
-    position: sticky;
 }
 .nav-list{
     display: flex;
@@ -49,4 +48,18 @@
     width: 100px;
     height: 50px;
     background-color: var(--color-screen);
+}
+.profile-name{
+    padding: 10px;
+    min-width: 24px;
+    min-height: 24px;
+    background-color: var(--color-button);
+    color: var(--text-color-btn);
+    font-weight: 700;
+    border: 2px solid var(--text-color-btn);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -37,11 +37,24 @@
     margin: 60px;
     display: flex;
     flex-direction: row;
+    gap: 100px;
 }
-.other-links{
+.other-links,.contact{
     display: flex;
     flex-direction: column;
     gap: 5px;
     color: white;
     text-decoration: none;
+}
+.contact{
+    gap: 10px;
+}
+.tag{
+    font-weight: bolder;
+}
+.copyright{
+    margin: 10px;
+}
+.copyright>span{
+    font-weight: 900;
 }

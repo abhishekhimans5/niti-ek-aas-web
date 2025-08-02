@@ -9,7 +9,6 @@ const TemporaryProfile = (props) => {
     const data = location.state || props.data || {};
   return (
     <div className="main-container">
-        {/* {JSON.stringify(data,null,2)} */}
         <div className="profile">
             <div className="pic">
                 {shortNameExtractor(data.name)}
